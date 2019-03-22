@@ -21,11 +21,11 @@ Just your run-of-the-mill CRUD todo app. Currently features backend functionalit
 
 -------------
 
-Currently the only routes the API supports are:
-`GET /api/all` - Fetch all Todos
-`POST /api/add` - Add a Todo
-`GET /api/delete/:id` - Delete a Todo by ID
-`POST /api/update/:id` - Update a Todo by ID
+Currently the only routes the API supports are:  
+- `GET /api/all` - Fetch all Todos  
+- `POST /api/add` - Add a Todo  
+- `GET /api/delete/:id` - Delete a Todo by ID  
+- `POST /api/update/:id` - Update a Todo by ID  
 
 -------------
 
