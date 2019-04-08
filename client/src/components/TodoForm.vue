@@ -6,16 +6,17 @@
 			type="text"
 			placeholder="I need to..."
 		/>
-		<div v-for="todo in todos" :key="todo.id">
-			<Todo
-			:todo="todo" 
-			/>
-		</div>
-		<Todo 
+		<!-- <Todo 
 			v-for="(todo, index) in todos"
 			:key="index"
 			:todo="todo"
-		/>
+		/> -->
+		<b-list-group>
+			<b-list-group-item
+				v-for="todo in todos"
+				:key="todo._id"
+			>{{ todo.name }}</b-list-group-item>
+		</b-list-group>
 	</div>
 </template>
 

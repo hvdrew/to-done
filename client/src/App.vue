@@ -1,7 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <TodoForm />
+    <b-container>
+      <b-row>
+      <b-col>
+        <img alt="Vue logo" src="./assets/logo.png">
+      </b-col>
+      <b-col>
+        <TodoForm />
+      </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -21,7 +29,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
 }
