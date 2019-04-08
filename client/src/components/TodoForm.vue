@@ -6,11 +6,21 @@
 			type="text"
 			placeholder="I need to..."
 		/>
-		<p>{{todos}}</p>
+		<div v-for="todo in todos" :key="todo.id">
+			<Todo
+			:todo="todo" 
+			/>
+		</div>
+		<Todo 
+			v-for="(todo, index) in todos"
+			:key="index"
+			:todo="todo"
+		/>
 	</div>
 </template>
 
 <script>
+import Todo from './Todo.vue'
 import axios from 'axios'
 
 export default {
@@ -54,6 +64,9 @@ export default {
 				console.log(error);
 			});
 		}
+	},
+	components: {
+		Todo
 	}
 }
 </script>
