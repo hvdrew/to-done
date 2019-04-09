@@ -6,22 +6,18 @@
 			type="text"
 			placeholder="I need to..."
 		/>
-		<!-- <Todo 
-			v-for="(todo, index) in todos"
-			:key="index"
-			:todo="todo"
-		/> -->
-		<b-list-group>
-			<b-list-group-item
-				v-for="todo in todos"
+		<b-list-group v-if="todos.length > 0">
+			<TodoItem 
+				v-for="todo in todos" 
 				:key="todo._id"
-			>{{ todo.name }}</b-list-group-item>
+				:todo="todo"
+			/>
 		</b-list-group>
 	</div>
 </template>
 
 <script>
-import Todo from './Todo.vue'
+import TodoItem from './TodoItem.vue'
 import axios from 'axios'
 
 export default {
@@ -67,7 +63,7 @@ export default {
 		}
 	},
 	components: {
-		Todo
+		TodoItem
 	}
 }
 </script>
